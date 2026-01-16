@@ -13,7 +13,7 @@ fun App() {
         Box(
             modifier = Modifier.fillMaxWidth().fillMaxHeight()
         ) {
-            SpeakerDeck()
+            Spotify()
         }
     }
 }
