@@ -1,44 +1,46 @@
-This is a Kotlin Multiplatform project targeting Web.
+# Kotlin/Wasm Embedding HTML Sample
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-    - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-    - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-      For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-      the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-      Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-      folder is the appropriate location.
+[Compose Multiplatform for Web v1.9.0](https://github.com/JetBrains/compose-multiplatform/releases/tag/v1.9.0)で追加された`WebElementView`関数のデモ用Webアプリです。
 
-### Build and Run Web Application
+## デモ内容
 
-To build and run the development version of the web app, use the run configuration from the run widget
-in your IDE's toolbar or run it directly from the terminal:
+以下の埋め込みコンテンツをドロップダウンメニューで切り替えて表示できます：
 
-- for the Wasm target (faster, modern browsers):
-    - on macOS/Linux
-      ```shell
-      ./gradlew :composeApp:wasmJsBrowserDevelopmentRun
-      ```
-    - on Windows
-      ```shell
-      .\gradlew.bat :composeApp:wasmJsBrowserDevelopmentRun
-      ```
-- for the JS target (slower, supports older browsers):
-    - on macOS/Linux
-      ```shell
-      ./gradlew :composeApp:jsBrowserDevelopmentRun
-      ```
-    - on Windows
-      ```shell
-      .\gradlew.bat :composeApp:jsBrowserDevelopmentRun
-      ```
+- **OpenStreetMap** - 地図の埋め込み
+- **SpeakerDeck** - スライドの埋め込み
+- **Spotify** - 音楽プレイヤーの埋め込み
 
----
+## ビルド & 実行
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+### 開発用（Development）
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack
-channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+**macOS / Linux:**
+```shell
+./gradlew :composeApp:wasmJsBrowserDevelopmentRun
+```
+
+**Windows:**
+```shell
+.\gradlew.bat :composeApp:wasmJsBrowserDevelopmentRun
+```
+
+### 本番用（Production）
+
+**macOS / Linux:**
+```shell
+./gradlew :composeApp:wasmJsBrowserDistribution
+```
+
+**Windows:**
+```shell
+.\gradlew.bat :composeApp:wasmJsBrowserDistribution
+```
+
+ビルド成果物は `composeApp/build/dist/wasmJs/productionExecutable/` に出力されます。
+
+## 参考文献
+
+- [What's new in Compose Multiplatform 1.9.0 - New API for embedding HTML content](https://kotlinlang.org/docs/multiplatform/whats-new-compose-190.html#new-api-for-embedding-html-content)
+- [Compose Multiplatform v1.9.0 Release Notes](https://github.com/JetBrains/compose-multiplatform/releases/tag/v1.9.0)
+- [CMP-8521: Web: Impossible to overlay Compose UI elements on WebElementView](https://youtrack.jetbrains.com/issue/CMP-8521/Web-Impossible-to-overlay-Compose-UI-elements-on-WebElementView)
+- [compose-multiplatform-core PR #2153: nested compose viewport demo](https://github.com/JetBrains/compose-multiplatform-core/pull/2153)
