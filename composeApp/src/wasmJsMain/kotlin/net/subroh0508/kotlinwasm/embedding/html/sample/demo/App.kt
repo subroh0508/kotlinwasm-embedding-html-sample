@@ -41,8 +41,7 @@ fun App() {
     MaterialTheme {
         Box(
             modifier = Modifier
-                .widthIn(min = 320.dp, max = 900.dp)
-                .fillMaxHeight(),
+                .fillMaxSize(),
             contentAlignment = Alignment.TopCenter,
         ) {
             Column(
