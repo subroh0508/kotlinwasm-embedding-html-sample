@@ -2,6 +2,11 @@
 
 [Compose Multiplatform for Web v1.9.0](https://github.com/JetBrains/compose-multiplatform/releases/tag/v1.9.0)で追加された`WebElementView`関数のデモ用Webアプリです。
 
+**デモサイト**: https://subroh0508.github.io/kotlinwasm-embedding-html-sample/
+
+> [!NOTE]
+> ドロップダウンメニューが描画されない場合は、ブラウザのウィンドウサイズを変更するなどして再描画を促してください。
+
 ## デモ内容
 
 以下の埋め込みコンテンツをドロップダウンメニューで切り替えて表示できます：
