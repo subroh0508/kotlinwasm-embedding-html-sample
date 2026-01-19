@@ -9,8 +9,8 @@ import androidx.compose.ui.viewinterop.WebElementView
 import kotlinx.browser.document
 import org.w3c.dom.HTMLIFrameElement
 
-private const val SPEAKERDECK_SRC = "https://speakerdeck.com/player/60ea30fcfad241239cba1b136736fc20"
-private const val SPEAKERDECK_TITLE = "MustをWillに変える技術 〜アイドル・郁田はるきが\"すべき\"の壁を超えるまで〜"
+private const val SPEAKERDECK_SRC = "https://speakerdeck.com/player/5de4947ef6a34dd299b99abe62d65bc7"
+private const val SPEAKERDECK_TITLE = "技術以外の世界に『越境』しエンジニアとして進化を遂げる 〜Kotlinへの愛とDevHRとしての挑戦を添えて〜"
 
 @OptIn(ExperimentalComposeUiApi::class)
 @Composable
